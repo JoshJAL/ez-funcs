@@ -101,7 +101,7 @@ handles invalid inputs gracefully.
 ### createDollaraAmount Example
 
 ```typescript
-import { createDollarAmount } from 'burnout-components/server';
+import { createDollarAmount } from 'ez-funcs';
 
 const amountString = '200';
 
@@ -178,7 +178,7 @@ float or null if the number cannot be parsed.
 ### extractNumber Example
 
 ```typescript
-import { extractNumber } from 'burnout-components/server';
+import { extractNumber } from 'ez-funcs';
 
 const inputString = '2,812.30 refund minus 25% CANCELLATION FEE.';
 
@@ -212,7 +212,7 @@ latter starts with a '1'.
 ### formatPhone Example
 
 ```typescript
-import { formatPhone } from 'burnout-components/server';
+import { formatPhone } from 'ez-funcs';
 
 const phoneNumber = '1234567890';
 
@@ -252,7 +252,7 @@ not end with a space before the ellipsis.
 ### truncateText Example
 
 ```typescript
-import { truncateText } from 'burnout-components/server';
+import { truncateText } from 'ez-funcs';
 
 const text 'Imagine this is super long text that needs to be truncated';
 
@@ -286,7 +286,7 @@ them a shot!
 ### tryCatch Example
 
 ```typescript
-import { tryCatch } from 'burnout-components/server';
+import { tryCatch } from 'ez-funcs';
 
 async function something() {
   const { data, error } = await tryCatch(async () => {
