@@ -35,7 +35,7 @@ npm install ez-funcs
 Using yarn:
 
 ```bash
-yard add ez-funcs
+yarn add ez-funcs
 ```
 
 Using bun:
