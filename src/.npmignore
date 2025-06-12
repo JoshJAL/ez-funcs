@@ -1,0 +1,8 @@
+# Dev dependencies
+node_modules
+
+# Lockfile
+package-lock.json
+
+# Local notes
+notes.txt
