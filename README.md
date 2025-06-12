@@ -20,7 +20,7 @@ planet is going to need a "capitalizeFirstLetters" function.
 
 ## Features
 
-- Several easy utility functions that are useful in many projects.
+- Several utility functions that are useful in many projects.
 - Source code to all of those functions is available in this README.
 - No dependencies, just copy and paste the code you need.
 
