@@ -1,6 +1,6 @@
 # Easy Functions
 
-This is just a list of easy utility functions I found myself copying and pasting
+This is a collection easy utility functions I found myself copying and pasting
 over various personal and work projects. I am not going to gate-keep the code,
 that will be provided in this README as well if you just want to have them in
 your code base without installing the entire project. Having this project makes
