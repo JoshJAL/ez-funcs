@@ -15,6 +15,7 @@ planet is going to need a "capitalizeFirstLetters" function.
 - [Create Dollar Amount](#create-dollar-amount)
 - [Extract Number](#extract-number)
 - [Format Phone](#format-phone)
+- [Trim String Properties](#trim-string-properties)
 - [Truncate Text](#truncate-text)
 - [Try Catch](#try-catch)
 
@@ -240,6 +241,49 @@ export function formatPhone(phoneNumber: string) {
   }
 
   return null;
+}
+```
+
+## Trim String Properties
+
+This function takes an object and returns a new object with all string properties trimmed of leading and trailing whitespace. Non-string properties are left unchanged.
+
+### trimStringProperties Example
+
+```typescript
+import { trimStringProperties } from 'ez-funcs';
+
+const userInput = {
+  name: '  John Doe  ',
+  email: '  john@example.com  ',
+  age: 30,
+  isActive: true
+};
+
+const cleanedInput = trimStringProperties(userInput);
+
+console.log(cleanedInput);
+// Output: { name: 'John Doe', email: 'john@example.com', age: 30, isActive: true }
+```
+
+### trimStringProperties Source Code
+
+```typescript
+export function trimStringProperties<T extends Record<string, unknown>>(obj: T): T {
+  const result = {} as T;
+
+  for (const key in obj) {
+    if (Object.prototype.hasOwnProperty.call(obj, key)) {
+      const value = obj[key];
+      if (typeof value === 'string') {
+        result[key as keyof T] = value.trim() as T[keyof T];
+      } else {
+        result[key as keyof T] = value as T[keyof T];
+      }
+    }
+  }
+
+  return result;
 }
 ```
 
